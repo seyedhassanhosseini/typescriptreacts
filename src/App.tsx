@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-
-
+import InputFeild from './components/InputFeild';
+import {Todo} from './models/models'
 let newOne:any;  // can use also unknown
 newOne = "seyed";
 
@@ -53,18 +53,20 @@ type Second  = Frist & {
 
 function App() {
   [age, name] = people;
+
+  const[todo,setTodo] = useState<string>("");
+  const[todos,setTodos] = useState<Todo[]>([]);
+
+
+  console.log(todo)
+
+  
   return (
     <div className="App">
-      {age}
-      <br/>
-      <br/>
-      <br/>
-      {name}
-      <br/>
-      <br/>
-      <br/>
 
-      
+      <span className='heading'> Taskify</span>
+      <InputFeild todo={todo} setTodo={setTodo}/>
+    
     </div>
   );
 }
