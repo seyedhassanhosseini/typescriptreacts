@@ -1,6 +1,10 @@
 import React from 'react';
 import './App.css';
 
+
+let newOne:any;  // can use also unknown
+newOne = "seyed";
+
 let name:string;
 name = "seyedssss";
 
@@ -32,7 +36,16 @@ type Persons = [
   name: string
 ]
 
-let people: Persons = [25,"hassan"] 
+let people: Persons = [25,"hassan"] ;
+
+let printName : (name: string) => void;   // function
+
+
+
+
+
+
+
 
 function App() {
   [age, name] = people;
