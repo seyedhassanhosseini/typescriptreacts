@@ -13,15 +13,39 @@ student = true;
 let hobbies:string[]; // array of string
 let hobbie:number[]; // array of number
 
+let role: [number, string];
+
+role = [5, "seyed"];
+
+type Person = {
+  name: string;
+  age?: number;
+};
+
+let seyed: Person = {
+  name: "pishssssss",
+  age: 10
+}
+
+type Persons = [
+  age: number,
+  name: string
+]
+
+let people: Persons = [25,"hassan"] 
 
 function App() {
+  [age, name] = people;
   return (
     <div className="App">
-      {name}
-      <br/>
       {age}
       <br/>
-      {student}
+      <br/>
+      <br/>
+      {name}
+      <br/>
+      <br/>
+      <br/>
 
       
     </div>
