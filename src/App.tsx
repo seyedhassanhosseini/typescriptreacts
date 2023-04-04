@@ -41,11 +41,15 @@ let people: Persons = [25,"hassan"] ;
 let printName : (name: string) => void;   // function
 
 
+interface Frist {
+  name: string;
+  age?: number;
+};
 
-
-
-
-
+type Second  = Frist & {
+  salarry: number;
+  interest: string;
+}
 
 function App() {
   [age, name] = people;
